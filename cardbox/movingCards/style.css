@@ -1,0 +1,34 @@
+body {
+  margin: 0px;
+  background: #666;
+  display: grid;
+  place-items: center;
+  /* place-items: stretch center; */
+  height: 100vh;
+  overflow: hidden;
+}
+.cards {
+  display: flex;
+}
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.6);
+  transition: transform .3s;
+}
+.card:not(:first-child) {
+  margin-left: -2rem;
+}
+/* ~ css选择符，A ~ B, 选择所有与A元素同级元素的所有后面的子元素B */
+.card:not(:last-child):hover {
+  transform: translateY(-1rem);
+}
+.card:not(:last-child):focus-within,
+.card:not(:last-child):hover {
+  transform: translateY(-1rem);
+}
+.card:not(:last-child):focus-within ~ .card,
+.card:not(:last-child):hover ~ .card {
+  transform: translateX(2rem);
+}
