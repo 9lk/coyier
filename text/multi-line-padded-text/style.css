@@ -1,0 +1,32 @@
+/* case1 style */
+.padded-multiline {
+    line-height: 2;
+    width: 300px;
+    margin: 20px auto;
+}
+
+.padded-multiline span {
+    background: linear-gradient(to right, red, blue);
+    border-radius: 2rem;
+    padding: 0.43rem;
+
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+
+/* case2 style */
+.box {
+    columns: 2;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.box .text {
+    border: solid 2px red;
+}
+
+.box-clone {
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
