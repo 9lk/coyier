@@ -1,0 +1,320 @@
+body {
+    margin: 0px;
+    font-size: 12px;
+}
+ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+dd { margin-inline-start: 1rem; line-height:2}
+a { 
+    text-decoration: none;
+    color: #666;
+}
+h2,h3 { text-indent: 1rem;}
+.icon {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    background: no-repeat #ccc;
+    vertical-align: middle;
+}
+.wrapper {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.left  {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.clearfix::after {
+    display: block;
+    content: ' ';
+    clear: both;
+}
+
+@font-face {
+    font-family: 'FaceFont';
+    src: 
+    url('font/iconfont.eot'), 
+    url('font/iconfont.svg'),
+    url('font/iconfont.ttf'),
+    url('font/iconfont.woff')
+}
+.iconfont::before { content: '\E609'; }
+.iconfont { font: normal 1rem 'FaceFont'; margin-right:.1rem;}
+.icon-phone::before { content: '\E604'; }
+.icon-cart::before { content: '\E603'; }
+.icon-new  { background: url(img/s_pic1.png) -15px -205px; }
+
+:root {
+    --h-head: 35px;
+    --h-nav: 36px;
+    --h-banner: 450px;
+    --bg-icon: #ffaa00;
+    --f-yahei: 'MicroSoft YaHei';
+    --bg-banner: #7701A1;
+    --bg-bullint: #F1E5F5;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: var(--bg-icon);
+}
+
+/* ----------------common end ------------ */
+header .topbar {
+    height: var(--h-head);
+    line-height: var(--h-head);
+    background: #f5f5f5;
+}
+
+header .topbar .site {}
+
+header .topbar .nav li {
+    float: left;
+    padding: 0em .43em;
+}
+
+header .topbar .nav sup {
+    font: normal 0.5rem/0.5ch var(--f-yahei);
+    border-radius: 50%;
+    background: var(--bg-icon);
+    padding: 0 .2rem;
+    margin-left: .1rem;
+    color: white;
+}
+
+.search .logo {
+    width: 190px;
+    height: 80px;
+    background: url(img/s_pic1.png) -85px -266px no-repeat;
+    display: inline-block;
+}
+.search {
+    position: relative;
+}
+.search-box {
+    margin-top:20px;
+    width: 600px;
+}
+.search-box .search-input:focus-within {
+    box-shadow: 2px 5px 10px 2px rgba(0,0,0, .3);
+}
+.search-box input {
+    line-height: 1rem;
+    height:38px;
+    border: solid 2px var(--bg-icon);
+}
+.search-box .btn-search {
+    border: solid 2px transparent;
+    box-sizing: border-box;
+    background: var(--bg-icon);
+}
+.search-box .keyword {
+    font-size: 14px;
+    line-height: 18px;
+    border-right: 0px;
+    text-indent: 1rem;
+    min-width: 480px;
+}
+.search-box .btn-search {
+    width: 100px;
+    color: white;
+    background: var(--bg-icon);
+}
+.search-box .btn-search:hover {
+    background:#ff8800;
+}
+.search-box .search-tags {
+    line-height: 2;
+}
+.search-box .search-tags li {
+    display: inline-block;
+    padding: .1rem;
+}
+.search .code {
+    position: absolute;
+    right:0;
+}
+/* -------------search end -------------------- */
+
+.navbar {
+    border-bottom: solid 2px #333;
+    line-height: var(--h-nav);
+}
+.navbar .cate {
+    background: var(--bg-icon);
+    width: 190px;
+    height: var(--h-nav);
+    text-indent: 1rem;
+    position: relative;
+}
+.navbar .cate li {
+    background: #2b2b2b;
+    border-top: solid 1px #333;
+    border-bottom: solid 1px #252525;
+}
+.navbar .cate-title {
+    line-height: var(--h-nav);
+    margin: 0px;
+}
+.navbar .cate-content-part {
+    position: absolute;
+    width: 800px;
+    height: var(--h-banner);
+    background: white;
+    top: 38px;
+    left: 190px;
+    box-shadow: 5px 3px 12px 3px rgba(0,0,0, .3);
+}
+.navbar .cate a {
+    color:white;
+}
+.navbar .cate i {
+    color: var(--bg-icon);
+}
+.navbar .cate li:hover a {
+    color:#666;
+}
+.navbar .cate li:hover {
+    background: white;
+}
+
+.navbar .menu li{
+    float: left;
+    margin-left: 2rem;
+}
+.navbar .cate-content-part{
+    display: none;
+}
+.navbar .cate-content-part .icon-close {
+    float: right;
+    padding: .5rem;
+}
+/* ------------------------ navbar end --------------------------- */
+
+.banner {
+    background: var(--bg-banner);
+    height: var(--h-banner);
+}
+.banner .focus {
+    margin-left: 225px;
+}
+.banner .focus .imglist img {
+    display: block;
+}
+.banner .focus .imglist li:not(:first-child) {
+    display: none;
+}
+.banner .bullint {
+    width: 190px;
+    background: white;
+    margin-top: 1rem;
+}
+.banner .bullint .info,
+.banner .bullint .helper {
+    background: var(--bg-bullint);
+}
+.banner dd:hover,
+.banner dd a:hover {
+    color: #FF6600;
+}
+.banner .bullint .helper dl {
+    text-align: center;
+    line-height: 2;
+    margin-block-end: 0;
+}
+.banner .bullint .helper dd {
+    display: inline-block;
+    margin-inline-start: 0;
+    width: 30%;
+    border: solid 1px rgba(200,200,200, .3);
+    padding: .2rem;
+    margin: .1rem;
+    box-sizing: border-box;
+}
+.banner .bullint .iconfont {
+    font-size: 24px;
+}
+/* --------------------- banner end --------------------------- */
+
+.particular img {
+    display: block;
+    max-width: fit-content;
+}
+.particular .col {
+    float:left;
+}
+.particular .col.hot {
+    width: 400px;
+}
+.particular .col.flash{
+    padding-top: 20px;
+    width: 400px;
+}
+.particular .col.flash img {
+    float: left;
+}
+/* ------------------- particular end -------------------------- */
+footer .row {
+    padding: 1rem 0;    
+}
+footer .services {
+    background: #F5F5F5;
+}
+footer .services .row-service{    
+    columns: 6;
+    padding: .5rem;
+}
+footer .services .row-guid>li {
+    box-sizing: border-box;
+    width: 16.66%;
+    float:left;
+}
+footer .services .detail {
+    display: inline-block;
+    vertical-align: middle;
+    padding: .5rem;
+}
+footer .services .icon {
+    width: 48px;
+    height: 50px;
+    border-radius: 48px 50px;
+}
+footer .services .detail h3 {
+    text-indent: 0;
+    margin: .3rem;
+}
+.icon-authentic   { background: url(img/s_pic1.png) 2px 2px; }
+.icon-logistics  { background: url(img/s_pic1.png) -47px 2px; }
+.icon-aftermarket  { background: url(img/s_pic1.png) -95px 2px; }
+.icon-service  { background: url(img/s_pic1.png) -143px 2px; }
+.icon-help  { background: url(img/s_pic1.png) -191px 0px; }
+
+footer .about {
+    background: #33302B;
+    color: white;
+}
+footer .about a {
+    color: white;
+}
+footer .about .row-office {
+    columns: 3;
+}
+footer .about .row-office img {
+    float: left;
+}
+footer .about .row-office .detail {
+}
+
+footer .bottom {
+    text-align: center;
+}
+
