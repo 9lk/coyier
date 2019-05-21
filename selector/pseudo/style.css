@@ -1,0 +1,45 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background: rgba(231, 220, 197, 0.932);
+  color: rgba(37, 154, 162, 0.774);
+}
+section.poems {
+  column-count: 2;
+}
+section.poems article.poem {
+  background: #fff;
+  border-radius: 1rem;
+  break-inside: avoid;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+section.poems article.poem p {
+  margin-block-start: 0;
+  letter-spacing: .1ch;
+  padding: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+  line-height: 2;
+}
+section.poems article.poem p:first-line {
+  color: rgba(255, 57, 31, 0.6);
+  font-variant-caps: small-caps;
+}
+section.code {
+  counter-reset: line 0;
+  font: bold 2rem/1 'Micro YaHei';
+}
+section.code pre::nth-line(line)::before {
+  counter-increment: line;
+  content: counter(line) '.';
+}
+pre::last-line {
+  background: red;
+}
+.text-gradient {
+  background-image: -webkit-gradient(linear, 0 0, right bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(72, 255, 0, 0.829)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style>
+            .text-gradient  {
+                display: inline;
+                color: green;
+                font: bolder 10em/1 'Micro YaHei';
+
+                /* 三个属性缺一不可，兼容性有待改进 */
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0, 128, 0, 1)), to(rgba(51, 51, 51, 1)) );
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }    
+        </style>
+    </head>
+    <body>
+        <div class="text-gradient">
+            <span>逍遥叹</span>
+        </div>
+    </body>
+</html>

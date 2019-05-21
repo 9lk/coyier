@@ -1,0 +1,55 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: hsla(40, 41%, 84%, 0.932);
+    color: hsla(184, 63%, 39%, 0.774);
+}
+
+// case 1  
+section.poems {
+    column-count: 2;
+    
+    article.poem {
+        background: #fff;
+        border-radius: 1rem;
+        break-inside: avoid;  // 打断内边距，消除缩小视窗时内容跨列
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
+
+        p {
+            margin-block-start: 0;
+            letter-spacing: .1ch;
+            padding: 1rem;
+            width: fit-content;
+            margin: 0 auto;
+            line-height: 2;
+        }
+        p:first-line {
+            color: hsla(7, 100%, 56%, 0.6);
+            font-variant-caps: small-caps;  // 小型字母显示
+        }
+    }
+}
+
+// case 2
+section.code {
+    counter-reset: line 0;
+
+    font: bold 2rem/1 'Micro YaHei';
+    pre::nth-line(line)::before {
+        counter-increment: line;
+        content: counter(line) + '.';
+    }
+}
+
+pre::last-line {
+    background:red;
+}
+
+.text-gradient {
+    // 刷一波 文本渐变
+    background-image: -webkit-gradient(linear, 0 0, right bottom, from(rgba(0, 0, 0, 0.8)), to( rgba(72, 255, 0, 0.829)) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
