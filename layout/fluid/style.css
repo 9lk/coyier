@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    background: #999;
+}
+h1 { padding:10px; color:white; margin:0; }
+
+#header {
+    background: black;
+    max-width: 960px;
+    min-width: 560px;
+    margin: 10px auto 0;
+}
+#footer {
+    background: black;
+    max-width: 960px;
+    min-width: 560px;
+    margin: 0 auto;
+    clear: both;
+} 
+#footer a { 
+    color: white;
+    border-bottom: 1px dotted white;
+    text-decoration: none;
+}
+#footer p { 
+    padding: 10px;
+    color:white;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 960px;
+    min-width: 560px;
+    background: white;
+    margin: 0 auto;
+}
+
+/* case half */
+#page-half .main-content {
+    width: 47%;
+    padding: 0 1%;
+    float: left;
+}
+#page-half .main-slider {
+    width: 47%;
+    padding: 0 1%;
+    float: right;
+}
+#page-half {
+    overflow: hidden;
+}
+
+/* case fluid  */
+#page-fluid .main-content {
+    min-width: 150px;
+    margin: 0 190px;
+}
+#page-fluid .main-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 190px;
+}
+#page-fluid .secondary-slider {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 190px;
+}
