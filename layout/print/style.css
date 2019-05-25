@@ -1,0 +1,37 @@
+
+/* case 1 */
+.box {
+    width: 200px;
+    height:200px;
+    background: #ccc;
+}
+.box-circle {
+    clip-path: circle();
+    shape-outside: circle();
+    float:left;
+  }
+
+  .box-polygon {
+    clip-path: polygon(200px 0, 200px 200px, 0 100px);
+    shape-outside: polygon(200px 0, 200px 200px, 0 100px); 
+    float:right;
+  }
+  .print-shap {
+    min-width: 600px;
+    margin: 0 auto;
+  }
+
+
+/* case 2 */
+.print .thumb-img {
+    float: left;
+    width: 200px; 
+    height: 200px;
+    --gradient: linear-gradient(145deg, #cd0000, transparent);
+    background: var(--gradient);
+    shape-outside: var(--gradient);
+    shape-image-threshold: 0.3;
+
+}
+
+  
