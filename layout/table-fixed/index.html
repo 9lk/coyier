@@ -1,0 +1,71 @@
+<html>
+    <head><link rel="stylesheet" href="style.css"></head>
+    <body>
+        <!-- table-layout: auto, 表格根据内容确定单元格宽度，统计每行内容的宽度，取非折行内容的最大宽度，可以自适应宽度，比较慢 -->
+        <table class="users-auto">
+            <thead>
+              <tr>
+                <th class="row-1 row-ID">ID</th>
+                <th class="row-2 row-name">Name</th>
+                <th class="row-3 row-job">Job</th>
+                <th class="row-4 row-email">Email<th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0001</td>
+                <td>Johnny Five</td>
+                <td>Robotin'</td>
+                <td>need@input.com</td>
+              </tr>
+              <tr>
+                <td>0002</td>
+                <td>Super Superlonglastnamesmith</td>
+                <td>Doin' stuff</td>
+                <td>doing@stuff.com</td>
+              </tr>
+            </tbody>
+        </table>
+
+        <br/>
+
+        <!-- table-layout: fixed, 单元格宽度自行确定，表格代理拿到最后一行就显示，与内容无关，显示比较快 -->
+        <!-- 注意项：text-overflow: ellipsis 需要在overflow非visible下有效 -->
+        <table class="users-fixed">
+            <thead>
+              <tr>
+                <th class="row-1 row-ID">ID</th>
+                <th class="row-2 row-name">Name</th>
+                <th class="row-3 row-job">Job</th>
+                <th class="row-4 row-email">Email<th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0001</td>
+                <td>Johnny Five</td>
+                <td>Robotin'</td>
+                <td>need@input.com</td>
+              </tr>
+              <tr>
+                <td>0002</td>
+                <td>Super Superlonglastnamesmith</td>
+                <td>Doin' stuff</td>
+                <td>doing@stuff.com</td>
+              </tr>
+              <tr>
+                    <td>0001</td>
+                    <td>Johnny Five</td>
+                    <td>Robotin'</td>
+                    <td>need@input.com</td>
+                  </tr>
+                  <tr>
+                    <td>0002</td>
+                    <td>Super Superlonglastnamesmith</td>
+                    <td>Doin' stuff</td>
+                    <td>doing@stuff.com</td>
+                  </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

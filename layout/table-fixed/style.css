@@ -1,0 +1,26 @@
+body { 
+    color:white;
+    background:black;
+}
+table {
+    width: 50%;
+    margin: 0px auto;
+    line-height: 2em;
+}
+tr {
+    box-shadow: 0 1em 9999px 2em hsla(46, 82%, 44%, 0.822);
+}
+td {
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.row-name {
+    width: 10%;
+}
+
+.users-fixed {
+    display: table;
+    table-layout: fixed;
+}
