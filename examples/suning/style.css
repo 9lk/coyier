@@ -21,7 +21,7 @@ h2,h3 { text-indent: 1rem;}
     vertical-align: middle;
 }
 .wrapper {
-    width: 1190px;
+    max-width: 1190px;
     margin: 0 auto;
 }
 
@@ -304,14 +304,17 @@ footer .about {
 }
 footer .about a {
     color: white;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    break-inside: avoid;
+    display: block;
+    overflow: hidden;
 }
 footer .about .row-office {
     columns: 3;
 }
 footer .about .row-office img {
     float: left;
-}
-footer .about .row-office .detail {
 }
 
 footer .bottom {
